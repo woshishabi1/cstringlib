@@ -70,7 +70,8 @@ void repstr(cstring* tarstr,int where,char val)
  - 寒假作业早做完了，但忘了我还有个项目要维护∑( 口 ||
  - 加入repstr，swapstr，poplist，pushlist
  - 四个函数改动，已经变得相对独立，不再依赖于其他函数，主要怕内存泄漏
- - ereasestr，insertstr和findstr还有点问题，下个版本再加
+ - erasestr，insertstr和findstr还有点问题，下个版本再加
+ - 给结构体赋了初始值，begin正式弃用
  
  ## PRPRPRPRPR
  - 如果遇到问题（特别是内存泄漏）或者有更好的算法或建议，欢迎提issues或者PR
