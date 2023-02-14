@@ -35,6 +35,28 @@ cpstr(cstring *tostr,cstring *tarstr)
  ```c
  void add_str(cstring *todata,cstring *str)
  ```
+  - 把char类型的val压入lis中<br>
+ 定义：<br>
+ ```c
+void pushlist(cstring *lis,char val)
+ ```
+ （本来函数名想写pushstr的，但最近在写vector，push算法和这个差不多，所以改了一下直接拿来用了，但忘改函数名了，后面一起改吧）<br>
+  - 把lis中最后一个值弹出并返回<br>
+ 定义：<br>
+ ```c
+char poplist(cstring *lis)
+ ```
+ （起名为poplist的原因同上）<br>
+ - 把Astr与Bstr的数据交换<br>
+ 定义：<br>
+ ```c
+void swapstr(cstring* Astr,cstring* Bstr)
+ ```
+  - 在tarstr中修改where处的值（从0开始数！）<br>
+ 定义：<br>
+ ```c
+void repstr(cstring* tarstr,int where,char val)
+ ```
  ## 编译器测试<br>
  
   cstring类型/编译器类型  |  MSVC 64 Debug  |  MSVC 64 Release  |  GCC 32BIT(WIN)  |  GCC 64BIT(WIN)  |  GCC 64BIT(LINUX)
@@ -42,9 +64,13 @@ cpstr(cstring *tostr,cstring *tarstr)
   C++STR  |  通过  |  未测试  |  通过  |  通过  | 通过 
   cstring  |  不通过，直接运行test报错  |  未测试  |  通过  |  通过  |  通过 
 
- 
+ -（后来看了一下，msvc要强制类型转换）
  ## 更新情况
  - 不定期，因为要写寒假作业ヽ(*。>Д<)o゜
+ - 寒假作业早做完了，但忘了我还有个项目要维护∑( 口 ||
+ - 加入repstr，swapstr，poplist，pushlist
+ - 四个函数改动，已经变得相对独立，不再依赖于其他函数，主要怕内存泄漏
+ - ereasestr，insertstr和findstr还有点问题，下个版本再加
  
  ## PRPRPRPRPR
  - 如果遇到问题（特别是内存泄漏）或者有更好的算法或建议，欢迎提issues或者PR
